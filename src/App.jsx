@@ -15,13 +15,21 @@ function App() {
   const [videos, setVideos] = useState(videoData);
   console.log("selectedVideo:  ",selectedVideo)
   console.log("videos:  ",videos)
+  
+  function clickVideoHandler (id){
+    const clickedVideo = videos.find((video)=>{
+        return video.id === id
+    })
+    setSelectedVideo(clickedVideo)
+};
 
   return (
     <div className="App">
       <Header />
-      <SelectedVideo selectedVideo = {selectedVideo}/>
-      <Comments />
-      <NextVideos nextVideos = {videos} />
+      <SelectedVideo selectedVideo = {selectedVideo} />
+      <Comments selectedVideo = {selectedVideo} />
+      <NextVideos nextVideos = {videos}
+        clickVideoHandler = {clickVideoHandler} />
     </div>
   )
 }

@@ -1,7 +1,8 @@
 import "./Comments.scss"
-import videoData from "../../data/video-details.json";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
-function Comments (){
+
+function Comments (props){
+    console.log(props)
     return (
         <section className="comments">
             <h2 className="comments_title">3 Comments </h2>
@@ -23,19 +24,27 @@ function Comments (){
 
             <div className="comments__list">
                 <hr />
-                <div className="comments__list-container">
-                    <div>
-                        <img className="comments__avatar"
-                        src={avatar} alt="avatar-icon" />
-                    </div>
-
-                    <div className="comments__list-text">
-                        <p>{videoData[0].comments[0].name}</p>
-                        <p>{videoData[0].comments[0].comment}</p>
-                        <p>{videoData[0].comments[0].timestamp}</p>
-                    </div>
-                </div>
-                <hr />
+                <ul className="comments_ul">
+                    {props.selectedVideo.comments.map((comment)=>{
+                        return (
+                            <li className="comments__item">
+                                <div className="comments__list-container">
+                                    <div>
+                                        <img className="comments__avatar"
+                                        src={avatar} alt="avatar-icon" />
+                                    </div>
+        
+                                    <div className="comments__list-text">
+                                        <p>{comment.name}</p>
+                                        <p>{comment.comment}</p>
+                                        <p>{comment.timestamp}</p>
+                                    </div>
+                                </div>
+                                <hr />
+                            </li>
+                        )
+                    })}
+                </ul>
             </div>
 
         </section>

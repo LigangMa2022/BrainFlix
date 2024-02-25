@@ -39,5 +39,11 @@
     &__list-text {
         width: 85%;
     }
+    &__item {
+        list-style: none;
+    }
 
+}
+hr {
+    margin: 0.5rem 0;
 }

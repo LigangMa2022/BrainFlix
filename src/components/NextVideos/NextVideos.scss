@@ -1,5 +1,4 @@
-
-
+@use "../../styles/partials/typography" as *;
 .nextVideos {
     padding: 1rem;
     &__container {
@@ -7,11 +6,18 @@
         justify-content: space-between;
     }
     &__img {
-        width: 55%;
+        width: 45%;
     }
     &__text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items:flex-start;
+        padding: 0.25rem;
+        font-weight: 400;
+    }
+    &__item {
+        list-style: none;
+        padding: 1rem 0;
     }
 }

@@ -1,7 +1,4 @@
 import "../SelectedVideo/SelectedVideo.scss";
-import views from "../../assets/Icons/views.svg";
-import likes from "../../assets/Icons/likes.svg";
-
 
 function SelectedVideo (props){
     console.log(props)
@@ -23,13 +20,13 @@ function SelectedVideo (props){
             <div>
                 <div className="selected__stats">
                     <p>By: {props.selectedVideo.channel}</p>
-                    <img src={views} alt="stats-views" />
+                    <img src={props.views} alt="stats-views" />
                     <p>{props.selectedVideo.views}</p>
                 </div>
 
                 <div className="selected__stats">
                     <p>{props.selectedVideo.timestamp}</p>
-                    <img src={likes} alt="stats-likes" />
+                    <img src={props.likes} alt="stats-likes" />
                     <p>{props.selectedVideo.likes}</p>
                 </div>
 

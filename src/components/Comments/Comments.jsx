@@ -27,7 +27,7 @@ function Comments (props){
                 <ul className="comments_ul">
                     {props.selectedVideo.comments.map((comment)=>{
                         return (
-                            <li className="comments__item">
+                            <li className="comments__item" key={comment.id}>
                                 <div className="comments__list-container">
                                     <div>
                                         <img className="comments__avatar"

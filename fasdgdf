@@ -1,0 +1,11 @@
+[33mcommit 14310dbdae69d942f36147a607eeb70bae4de694[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mBrainFlix_sprint-1[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: DW <danwang809@gmail.com>
+Date:   Sat Feb 24 16:44:36 2024 -0800
+
+    BrainFlix project initialized!
+
+[33mcommit acb15bb19f8b7a7ea695750c2cfaceca08f8ba4c[m
+Author: DW <danwang809@gmail.com>
+Date:   Thu Feb 22 23:37:19 2024 -0800
+
+    Initialize project using Create React App

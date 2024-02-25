@@ -1,0 +1,25 @@
+//   * {
+//       border: 1px dotted chartreuse;
+//   }
+.selected {
+    &__image {
+        width: 100%;
+        padding: 1rem 0;
+    }
+    &__title {
+        margin-bottom: 1rem;
+        font-weight: 700;
+        padding: 0 1rem;
+    }
+    &__line {
+        margin: 1rem;
+    }
+    &__stats {
+        padding: 0 1rem;
+        display: flex;
+        justify-content:space-between;
+    }
+    &__description {
+        padding: 0.5rem 1rem;
+    }
+}

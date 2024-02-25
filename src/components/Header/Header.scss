@@ -1,0 +1,48 @@
+@use "../../styles/partials/variables" as *;
+// *{
+//     border: 1px dotted chocolate;
+// }
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    &__logo {
+        width: 7.5rem;
+        margin-bottom: 1rem;
+    }
+    &__search {
+        width: 70%;
+        height: 2rem;
+    }
+    &__search-container {
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+    }
+    &__avatar {
+        height: 2.25rem;
+        border-radius: 50%;
+    }
+    &__upload {
+        background-color: $primary-color2;
+        margin-top: 1rem;
+        height: 2rem;
+        width: 100%;
+    }
+    &__fileUpload {
+        width: 100%;
+        opacity: 0;
+    }
+    &__fileUpload-label {
+        justify-content: center;
+        display: flex;
+        top: -1rem;
+        position: relative;
+    }
+    &__fileUpload-icon {
+        display: flex;
+    }
+}

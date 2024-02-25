@@ -1,3 +1,5 @@
+@use "../src/styles/partials/variables" as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,5 +9,5 @@
 body {
   font-family: "Avenir";
   font-weight: 400;
-  background-color: #ffffff;
-}/*# sourceMappingURL=App.css.map */
+  background-color: $primary-color3;
+}

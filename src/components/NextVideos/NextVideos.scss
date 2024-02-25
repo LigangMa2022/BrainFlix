@@ -1,0 +1,17 @@
+
+
+.nextVideos {
+    padding: 1rem;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img {
+        width: 55%;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

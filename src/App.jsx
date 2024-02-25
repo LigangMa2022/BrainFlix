@@ -4,22 +4,24 @@ import SelectedVideo from './components/SelectedVideo/SelectedVideo';
 import Comments from './components/Comments/Comments';
 import NextVideos from './components/NextVideos/NextVideos';
 import videoData from "../src/data/video-details.json";
+import views from "./assets/Icons/views.svg";
+import likes from "./assets/Icons/likes.svg";
 import { useState } from 'react';
 
 
 function App() {
 
-  const {selectedVideos, setSelectedVideos} = useState(videoData[0]);
+  const [selectedVideo, setSelectedVideo] = useState(videoData[0]);
+  const [videos, setVideos] = useState(videoData);
+  console.log("selectedVideo:  ",selectedVideo)
+  console.log("videos:  ",videos)
 
   return (
     <div className="App">
       <Header />
-      <SelectedVideo />
+      <SelectedVideo selectedVideo = {selectedVideo}/>
       <Comments />
-      <NextVideos
-        nextVideosImage = {videoData.map((item)=>{return item.image})}
-        nextVideosTitle = {videoData.map((item)=>{return item.title})}
-        nextVideosAuthor = {videoData.map((item)=>{return item.channel})} />
+      <NextVideos nextVideos = {videos} />
     </div>
   )
 }

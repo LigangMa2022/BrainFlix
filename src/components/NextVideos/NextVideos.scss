@@ -1,12 +1,16 @@
+@use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 .nextVideos {
     padding: 1rem;
     &__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        padding: 0 1rem;
     }
     &__img {
         width: 45%;
+        margin-right: 1.5rem;
     }
     &__text {
         display: flex;
@@ -16,8 +20,26 @@
         padding: 0.25rem;
         font-weight: 400;
     }
+    &__text-title {
+        font-weight: 700;
+    }
     &__item {
         list-style: none;
         padding: 1rem 0;
+    }
+}
+@include tablet {
+    .nextVideos {
+        &__text-title {
+            width: 75%;
+        }
+    }
+}
+@include desktop {
+    .nextVideos {
+        width: 35%;
+        &__text-title {
+            width: 75%;
+        }
     }
 }

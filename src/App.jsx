@@ -25,11 +25,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SelectedVideo selectedVideo = {selectedVideo}
-        likes = {likes}  views = {views} />
-      <Comments selectedVideo = {selectedVideo} />
-      <NextVideos nextVideos = {videos}
-        clickVideoHandler = {clickVideoHandler} />
+      <SelectedVideo selectedVideo = {selectedVideo} likes = {likes} views = {views}/>
+      <div className='lastTwoSection'>
+        <Comments selectedVideo = {selectedVideo} />
+        <NextVideos nextVideos = {videos} clickVideoHandler = {clickVideoHandler} />
+      </div>
     </div>
   )
 }

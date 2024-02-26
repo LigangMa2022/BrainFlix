@@ -5,7 +5,7 @@ function Comments (props){
     console.log(props)
     return (
         <section className="comments">
-            <h2 className="comments_title">3 Comments </h2>
+            <h2 className="comments__title">3 Comments </h2>
             <div className="comments__core">
                 <div className="comments__img">
                     <img className="comments__avatar"
@@ -13,34 +13,42 @@ function Comments (props){
                 </div>
 
                 <form className="comments__form" >
-                    <label htmlFor="">JOIN THE CONVERSATION</label>
-                    <input className="comments__input"
-                    type="text"
-                    placeholder="Add a new comment" />
-                    <button className="comments__btn">COMMENT</button>
+                    <label className="comments__form-label"
+                        htmlFor="">JOIN THE CONVERSATION</label>
+                    <div className="comments__form-container">
+                        <input className="comments__input"
+                        type="text"
+                        placeholder="Add a new comment" />
+                        <button className="comments__btn">COMMENT</button>
+                    </div>
+
                 </form>
 
             </div>
 
             <div className="comments__list">
-                <hr />
+                <hr className="comments__hr" />
                 <ul className="comments_ul">
                     {props.selectedVideo.comments.map((comment)=>{
                         return (
                             <li className="comments__item" key={comment.id}>
                                 <div className="comments__list-container">
                                     <div>
-                                        <img className="comments__avatar"
+                                        <img className="comments__avatar-user"
                                         src={avatar} alt="avatar-icon" />
                                     </div>
         
                                     <div className="comments__list-text">
-                                        <p>{comment.name}</p>
+                                        <div className="comments__list-special">
+                                            <p className="comments__list-name">{comment.name}</p>
+                                            <p className="comments__list-time">
+                                            {comment.timestamp.toLocaleString('en-US', {month: '2-digit', day: '2-digit', year: 'numeric'})}
+                                            </p>
+                                        </div>
                                         <p>{comment.comment}</p>
-                                        <p>{comment.timestamp}</p>
                                     </div>
                                 </div>
-                                <hr />
+                                <hr className="comments__hr" />
                             </li>
                         )
                     })}

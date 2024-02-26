@@ -1,6 +1,9 @@
 //   * {
 //       border: 1px dotted chartreuse;
 //   }
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 .selected {
     &__image {
         width: 100%;
@@ -13,13 +16,70 @@
     }
     &__line {
         margin: 1rem;
+        color: #e1e1e1;
+    }
+    &__line-upper {
+        margin: 1rem;
+        color: #e1e1e1;
     }
     &__stats {
-        padding: 0 1rem;
         display: flex;
-        justify-content:space-between;
+        justify-content: flex-start;
+    }
+    &__stat {
+        margin: 0 2rem;
+    }
+    &__stat-channel {
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+    &__views {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    &__views-icon {
+        margin-right: 1rem;
+    }
+    &__likes {
+        display: flex;
+    }
+    &__likes-icon {
+        margin-right: 1rem;
     }
     &__description {
         padding: 0.5rem 1rem;
+    }
+}
+@include tablet {
+    .selected {
+        &__image {
+            padding: 0 1.5rem;
+            background-color: black;
+            margin-bottom: 1.5rem;
+        }
+        &__line-upper {
+            margin: 0;
+            opacity: 0;
+        }
+        &__stats {
+            justify-content: space-between;
+        }
+        &__stat {
+            align-items: flex-start;
+            display: flex;
+        }
+        &__stat-channel {
+            margin-right: 1rem;
+        }
+        &__views {
+            margin-right: 1rem;
+        }
+    }
+}
+@include desktop {
+    .selected {
+        &__image {
+            padding: 0 10rem;
+        }
     }
 }

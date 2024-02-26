@@ -19,7 +19,7 @@ function NextVideos (props){
                                 src={nextVideo.image}
                                 alt="similar-videos" />
                                 <div className="nextVideos__text">
-                                    <p>{nextVideo.title}</p>
+                                    <p className="nextVideos__text-title">{nextVideo.title}</p>
                                     <p>{nextVideo.channel}</p>
                                 </div>
                             </div>

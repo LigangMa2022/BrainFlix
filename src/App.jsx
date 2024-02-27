@@ -28,7 +28,7 @@ function App() {
       <SelectedVideo selectedVideo = {selectedVideo} likes = {likes} views = {views}/>
       <div className='lastTwoSection'>
         <Comments selectedVideo = {selectedVideo} />
-        <NextVideos nextVideos = {videos} clickVideoHandler = {clickVideoHandler} />
+        <NextVideos nextVideos = {videos} clickVideoHandler = {clickVideoHandler} selectedVideo = {selectedVideo} />
       </div>
     </div>
   )

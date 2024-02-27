@@ -2,7 +2,14 @@ import "./Comments.scss"
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments (props){
+    
     console.log(props)
+
+    function formateDate (t){
+        let selectedVideoDate = new Date (t);
+        return selectedVideoDate.toLocaleDateString('en-US');
+    }
+
     return (
         <section className="comments">
             <h2 className="comments__title">3 Comments </h2>
@@ -42,7 +49,7 @@ function Comments (props){
                                         <div className="comments__list-special">
                                             <p className="comments__list-name">{comment.name}</p>
                                             <p className="comments__list-time">
-                                            {comment.timestamp.toLocaleString('en-US', {month: '2-digit', day: '2-digit', year: 'numeric'})}
+                                            {formateDate(comment.timestamp)}
                                             </p>
                                         </div>
                                         <p>{comment.comment}</p>

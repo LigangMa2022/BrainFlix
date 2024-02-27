@@ -2,6 +2,12 @@ import "../SelectedVideo/SelectedVideo.scss";
 
 function SelectedVideo (props){
     console.log(props)
+    
+    function formateDate (t){
+        let selectedVideoDate = new Date (t);
+        return selectedVideoDate.toLocaleDateString('en-US');
+    }
+
     return (
         <div className="selected">
             <div>
@@ -21,7 +27,7 @@ function SelectedVideo (props){
                 <div className="selected__stat">
                     <p className="selected__stat-channel">
                         By  {props.selectedVideo.channel}</p>
-                    <p>{props.selectedVideo.timestamp}</p>
+                    <p>{formateDate(props.selectedVideo.timestamp)}</p>
                 </div>
 
                 <div className="selected__stat">

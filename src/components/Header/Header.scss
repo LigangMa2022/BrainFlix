@@ -1,9 +1,9 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
-// *{
-//     border: 1px dotted chocolate;
-// }
+ *{
+     border: 1px dotted chocolate;
+ }
 .header {
     display: flex;
     flex-direction: column;
@@ -19,14 +19,19 @@
         height: 2.25rem;
     }
     &__search-container {
-        width: 100%;
+        // width: 100%;
         align-items: center;
         justify-content: space-around;
         display: flex;
     }
-    &__avatar {
+    &__avatar1 {
         height: 2.25rem;
         border-radius: 50%;
+    }
+    &__avatar2 {
+        height: 2.25rem;
+        border-radius: 50%;
+        display: none;
     }
     &__upload {
         background-color: $primary-color2;
@@ -36,18 +41,21 @@
     }
     &__fileUpload {
         width: 100%;
-        opacity: 0;
+        display: none;
+        position: relative;
+        align-items: center;
     }
     &__fileUpload-label {
         justify-content: center;
         display: flex;
-        top: -0.65rem;
         position: relative;
         color: white;
         font-weight: 400;
     }
     &__fileUpload-icon {
-        display: flex;
+        position: absolute;
+        left: 2rem;
+        background-color: $primary-color2;
     }
 }
 @include tablet {
@@ -59,14 +67,21 @@
         &__upload {
             width:45%;
             margin-top: 0;
+            display: flex;
+            justify-content: space-evenly;
         }
         &__logo {
             margin-bottom: 0;
         }
-        &__avatar {
+        &__avatar1 {
             height: 2.25rem;
             border-radius: 50%;
-            opacity: 10;
+            display: none;
+        }
+        &__avatar2 {
+            height: 2.25rem;
+            border-radius: 50%;
+            display: inline-block;
         }
         &__search {
             width: 65%;

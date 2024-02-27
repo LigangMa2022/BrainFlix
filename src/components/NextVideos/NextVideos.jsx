@@ -9,7 +9,7 @@ function NextVideos (props){
         <section className="nextVideos">
             <h2 className="nextVideos__title">Next videos</h2>
             <ul className="nextVideos__list"></ul>
-            {props.nextVideos//.filter((nextVideo)=>(nextVideo.id !== props.selectedVideo.id))
+            {props.nextVideos.filter((nextVideo)=>(nextVideo.id !== props.selectedVideo.id))
                 .map((nextVideo)=>{
                     return (
                         <li className="nextVideos__item" key={nextVideo.id}

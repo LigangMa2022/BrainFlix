@@ -9,14 +9,18 @@ function Header (){
 
             <div className="header__search-container">
                 <input type="search" className="header__search" placeholder="Search"/>
-                <img className="header__avatar" src={avatar} alt="avatar-image" />
+                <img className="header__avatar1" src={avatar} alt="avatar-image" />
             </div>
 
-            <div className="header__upload"> 
+            <div className="header__upload">
                 <input type="file" id="fileUpload" className="header__fileUpload" />
-                <label htmlFor="fileUpload" className="header__fileUpload-label">UPLOAD</label>
-                <img className="header__fileUpload-icon" src={upload} alt="uploadIcon" />
+                <label htmlFor="fileUpload" className="header__fileUpload-label">
+                    <img className="header__fileUpload-icon" src={upload} alt="uploadIcon" />
+                    UPLOAD
+                </label>
+                
             </div>
+            <img className="header__avatar2" src={avatar} alt="avatar-image" />
         </div>
     )
 }

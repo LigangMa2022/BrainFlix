@@ -8,47 +8,7 @@
     &__image {
         width: 100%;
         padding: 1rem 0;
-    }
-    &__title {
-        margin-bottom: 1rem;
-        font-weight: 700;
-        padding: 0 1rem;
-    }
-    &__line {
-        margin: 1rem;
-        color: #e1e1e1;
-    }
-    &__line-upper {
-        margin: 1rem;
-        color: #e1e1e1;
-    }
-    &__stats {
-        display: flex;
-        justify-content: flex-start;
-    }
-    &__stat {
-        margin: 0 2rem;
-    }
-    &__stat-channel {
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-    &__views {
-        display: flex;
-        margin-bottom: 1rem;
-    }
-    &__views-icon {
-        margin-right: 1rem;
-    }
-    &__likes {
-        display: flex;
-    }
-    &__likes-icon {
-        margin-right: 1rem;
-    }
-    &__description {
-        padding: 0.5rem 1rem;
-    }
+    } 
 }
 @include tablet {
     .selected {
@@ -56,23 +16,6 @@
             padding: 0 1.5rem;
             background-color: black;
             margin-bottom: 1.5rem;
-        }
-        &__line-upper {
-            margin: 0;
-            opacity: 0;
-        }
-        &__stats {
-            justify-content: space-between;
-        }
-        &__stat {
-            align-items: flex-start;
-            display: flex;
-        }
-        &__stat-channel {
-            margin-right: 1rem;
-        }
-        &__views {
-            margin-right: 1rem;
         }
     }
 }

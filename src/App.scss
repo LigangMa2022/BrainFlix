@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  // border: 1px dotted red;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   background-color: $primary-color3;
 }
 @include desktop {
-  .lastTwoSection {
+  .lastThreeSection {
     display: flex;
     flex-wrap: wrap;
   }

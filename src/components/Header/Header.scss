@@ -1,9 +1,9 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
- *{
-     border: 1px dotted chocolate;
- }
+//  *{
+//      border: 1px dotted chocolate;
+//  }
 .header {
     display: flex;
     flex-direction: column;
@@ -109,11 +109,14 @@
 @include desktop {
     .header {
         &__search {
-            width: 40%;
+            width: 100%;
             margin-left: 25rem;
         }
+        &__search-container {
+            width: 60%;
+        }
         &__upload {
-            width: 30%;
+            width: 15%;
         }
         
     }

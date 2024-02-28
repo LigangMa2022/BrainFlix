@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from "./components/Header/Header";
 import SelectedVideo from './components/SelectedVideo/SelectedVideo';
+import SelectedVideoInfo from './components/SelectedVideoInfo/SelectedVideoInfo';
 import Comments from './components/Comments/Comments';
 import NextVideos from './components/NextVideos/NextVideos';
 import videoData from "../src/data/video-details.json";
@@ -25,8 +26,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SelectedVideo selectedVideo = {selectedVideo} likes = {likes} views = {views}/>
-      <div className='lastTwoSection'>
+      <SelectedVideo selectedVideo = {selectedVideo}/>
+      <div className="lastThreeSection">
+        <SelectedVideoInfo selectedVideo = {selectedVideo} likes = {likes} views = {views}/>
         <Comments selectedVideo = {selectedVideo} />
         <NextVideos nextVideos = {videos} clickVideoHandler = {clickVideoHandler} selectedVideo = {selectedVideo} />
       </div>

@@ -1,4 +1,4 @@
-import "./Comments.scss"
+import "../Comments/Comments.scss"
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments (props){

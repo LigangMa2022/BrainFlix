@@ -6,6 +6,7 @@ function SelectedVideoInfo (props){
         let selectedVideoDate = new Date (t);
         return selectedVideoDate.toLocaleDateString('en-US');
     }
+    
     return (
         <div className="selected">
             <div>

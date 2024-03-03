@@ -2,13 +2,11 @@ import "../Comments/Comments.scss"
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 
 function Comments (props){
-    
-    console.log(props)
 
     function formateDate (t){
         let selectedVideoDate = new Date (t);
         return selectedVideoDate.toLocaleDateString('en-US');
-    }
+    };
 
     return (
         <section className="comments">
@@ -36,7 +34,7 @@ function Comments (props){
             <div className="comments__list">
                 <hr className="comments__hr" />
                 <ul className="comments_ul">
-                    {props.selectedVideo.comments.map((comment)=>{
+                    {props.selectedVideo?.comments?.map((comment)=>{
                         return (
                             <li className="comments__item" key={comment.id}>
                                 <div className="comments__list-container">
@@ -66,4 +64,4 @@ function Comments (props){
         
     )
 }
-export default Comments
+export default Comments;

@@ -7,16 +7,17 @@ import Header from "./components/Header/Header";
 function App() {
 
   return (
-    <div className="app">
-      <BrowserRouter>
-        <Header/>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
         <Routes>
           <Route path="/" element = {<HomePage />} />
+          <Route path="/:videoID" element = {<HomePage />} />
           <Route path="VideoDetailsPage" element = {<VideoDetailsPage />} />
           <Route path="VideoUploadPage" element = {<VideoUploadPage />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 

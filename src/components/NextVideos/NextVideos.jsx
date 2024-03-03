@@ -2,8 +2,7 @@ import "../NextVideos/NextVideos.scss";
 
 
 function NextVideos (props){
-    console.log(props.nextVideos)
-    // construct a function used to grab clicked video
+    console.log(props)
 
     return (
         <section className="nextVideos">
@@ -12,8 +11,7 @@ function NextVideos (props){
             {props.nextVideos.filter((nextVideo)=>(nextVideo.id !== props.selectedVideo.id))
                 .map((nextVideo)=>{
                     return (
-                        <li className="nextVideos__item" key={nextVideo.id}
-                            onClick={()=>{props.clickVideoHandler(nextVideo.id)}}>
+                        <li className="nextVideos__item" key={nextVideo.id}>
                             <div className="nextVideos__container">
                                 <img className="nextVideos__img"
                                 src={nextVideo.image}

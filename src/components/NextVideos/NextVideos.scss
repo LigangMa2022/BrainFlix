@@ -3,7 +3,8 @@
 @use "../../styles/partials/mixins" as *;
 .nextVideos {
     padding: 1rem;
-    &__container {
+    &__link {
+        text-decoration: none;
         display: flex;
         justify-content: flex-start;
         padding: 0 1rem;

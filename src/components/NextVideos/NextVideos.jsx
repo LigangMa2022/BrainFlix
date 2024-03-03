@@ -1,5 +1,5 @@
 import "../NextVideos/NextVideos.scss";
-
+import { Link, useParams } from "react-router-dom";
 
 function NextVideos (props){
     console.log(props)
@@ -12,15 +12,15 @@ function NextVideos (props){
                 .map((nextVideo)=>{
                     return (
                         <li className="nextVideos__item" key={nextVideo.id}>
-                            <div className="nextVideos__container">
+                            <Link to={`/videos/${nextVideo.id}`} className="nextVideos__link" >
                                 <img className="nextVideos__img"
                                 src={nextVideo.image}
-                                alt="similar-videos" />
+                                alt={nextVideo.title} />
                                 <div className="nextVideos__text">
                                     <p className="nextVideos__text-title">{nextVideo.title}</p>
                                     <p>{nextVideo.channel}</p>
                                 </div>
-                            </div>
+                            </Link>
                         </li>
                     )
                 })

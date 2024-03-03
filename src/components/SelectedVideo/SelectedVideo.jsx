@@ -1,7 +1,6 @@
 import "../SelectedVideo/SelectedVideo.scss";
 
 function SelectedVideo (props){
-    console.log(props)
 
     return (
             <div>

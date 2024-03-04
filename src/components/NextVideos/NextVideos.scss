@@ -1,6 +1,11 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
+body {
+    font-family: "Avenir";
+    font-weight: 400;
+    background-color: $primary-color3;
+  }
 .nextVideos {
     padding: 1rem;
     &__link {

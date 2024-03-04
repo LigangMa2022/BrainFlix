@@ -4,6 +4,7 @@
 
 .comments {
     padding: 1rem;
+    font-family: "Avenir";
     &__title {
         font-weight: 700;
         margin: 1rem;
@@ -60,6 +61,10 @@
     }
     &__list-name {
         font-weight: 700;
+        margin: 0;
+    }
+    &__list-time {
+        margin: 0;
     }
     &__item {
         list-style: none;

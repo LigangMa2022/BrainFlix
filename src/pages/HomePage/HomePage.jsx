@@ -7,6 +7,7 @@ import likes from "../../assets/Icons/likes.svg";
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 import { useParams } from "react-router-dom";
+import "../HomePage/HomePage.scss"
 
 const baseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
 const apiKey = "a3a540ed-f3af-439b-ad1c-bee902a946f2";

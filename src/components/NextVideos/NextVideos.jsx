@@ -1,8 +1,7 @@
 import "../NextVideos/NextVideos.scss";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NextVideos (props){
-    console.log(props)
 
     return (
         <section className="nextVideos">

@@ -9,8 +9,7 @@ import axios from 'axios'
 import { useParams } from "react-router-dom";
 import "../HomePage/HomePage.scss"
 
-const baseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
-const apiKey = "a3a540ed-f3af-439b-ad1c-bee902a946f2";
+const baseURL = "http://localhost:8080";
 const defaultVideoID = "84e96018-4022-434e-80bf-000ce4cd12b8";
 
 function HomePage () {
@@ -18,27 +17,21 @@ function HomePage () {
   const [selectedVideo, setSelectedVideo] = useState({});
   const [videos, setVideos] = useState([]);
   const params = useParams();
-  console.log(params)
   
   useEffect( ()=> {
     async function getVideosData() {
-      const response = await axios.get(`${baseURL}/videos/?api_key=${apiKey}`);
+      const response = await axios.get(`${baseURL}/videos`);
       const videoData = await response.data;
-      console.log(videoData);
       setVideos(videoData);
-      console.log("videoData is : ",videos)
     }
     getVideosData();
-  }  
+  } 
   ,[])
 
   useEffect(()=> {
-
-    console.log("params use effect ran",params)
     async function getSeletedVideo (ID){
-      const response =  await axios.get(`${baseURL}/videos/${ID}?api_key=${apiKey}`);
+      const response =  await axios.get(`${baseURL}/videos/${ID}`);
       setSelectedVideo(response.data)
-      console.log("selectedVideo data is: ",response.data)
     }
 
     if (params.videoID) {

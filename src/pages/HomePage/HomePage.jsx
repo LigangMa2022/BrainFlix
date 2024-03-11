@@ -19,16 +19,24 @@ function HomePage () {
   const params = useParams();
   
   useEffect( ()=> {
-    async function getVideosData() {
-      const response = await axios.get(`${baseURL}/videos`);
-      const videoData = await response.data;
-      setVideos(videoData);
+
+    try {
+      async function getVideosData() {
+        const response = await axios.get(`${baseURL}/videos`);
+        const videoData = await response.data;
+        setVideos(videoData);
+      }
+      getVideosData();
+
+    } catch (error) {  
+      console.log("failed to get data from api");
     }
-    getVideosData();
-  } 
+
+  }
   ,[])
 
   useEffect(()=> {
+
     async function getSeletedVideo (ID){
       const response =  await axios.get(`${baseURL}/videos/${ID}`);
       setSelectedVideo(response.data)
